@@ -1,0 +1,228 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://codigos/Escena_principal.gd" type="Script" id=1]
+[ext_resource path="res://escenas/CPUParticles.tscn" type="PackedScene" id=2]
+[ext_resource path="res://escenas_importadas/rojo.material" type="Material" id=3]
+[ext_resource path="res://escenas/barra.tscn" type="PackedScene" id=4]
+[ext_resource path="res://escenas/pelota.tscn" type="PackedScene" id=5]
+[ext_resource path="res://escenas_importadas/azul.material" type="Material" id=6]
+[ext_resource path="res://escenas/bloques_rigidos.tscn" type="PackedScene" id=7]
+[ext_resource path="res://typografias/A-Space Black Demo.otf" type="DynamicFontData" id=8]
+[ext_resource path="res://musica_y_vfx/gameover.wav" type="AudioStream" id=9]
+[ext_resource path="res://musica_y_vfx/point.wav" type="AudioStream" id=10]
+[ext_resource path="res://musica_y_vfx/pelota.wav" type="AudioStream" id=11]
+[ext_resource path="res://musica_y_vfx/POL-dragon-story-short.wav" type="AudioStream" id=12]
+[ext_resource path="res://musica_y_vfx/algunos sonidos mas/error.wav" type="AudioStream" id=13]
+[ext_resource path="res://UI/flecha_ui.png" type="Texture" id=14]
+[ext_resource path="res://UI/flecha_ui_presionada.png" type="Texture" id=15]
+[ext_resource path="res://UI/Start_ui.png" type="Texture" id=16]
+[ext_resource path="res://UI/Start_ui_presionado.png" type="Texture" id=17]
+
+[sub_resource type="ArrayMesh" id=1]
+surfaces/0 = {
+"aabb": AABB( -20, -25.6838, -0.5, 40, 40, 1.00001 ),
+"array_data": PoolByteArray( 0, 0, 160, 193, 81, 15, 101, 65, 0, 0, 0, 63, 129, 0, 0, 0, 127, 0, 0, 127, 0, 57, 0, 60, 0, 0, 160, 193, 81, 15, 69, 65, 0, 0, 0, 191, 129, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 58, 0, 0, 160, 193, 81, 15, 69, 65, 0, 0, 0, 63, 129, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 60, 0, 0, 160, 193, 81, 15, 101, 65, 0, 0, 0, 191, 129, 0, 0, 0, 127, 0, 0, 127, 0, 57, 0, 58, 0, 0, 160, 193, 81, 15, 101, 65, 0, 0, 0, 191, 0, 0, 129, 0, 127, 0, 0, 127, 0, 57, 0, 58, 0, 0, 144, 193, 81, 15, 69, 65, 0, 0, 0, 191, 0, 0, 129, 0, 0, 127, 0, 127, 0, 57, 0, 56, 0, 0, 160, 193, 81, 15, 69, 65, 0, 0, 0, 191, 0, 0, 129, 0, 0, 127, 0, 127, 0, 57, 0, 58, 0, 0, 144, 193, 81, 15, 101, 65, 0, 0, 0, 191, 0, 0, 129, 0, 127, 0, 0, 127, 0, 57, 0, 56, 0, 0, 0, 0, 81, 15, 101, 65, 0, 0, 0, 63, 0, 0, 127, 0, 127, 0, 0, 129, 0, 57, 0, 52, 0, 0, 144, 193, 81, 15, 69, 65, 0, 0, 0, 63, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 52, 0, 0, 0, 0, 81, 15, 69, 65, 0, 0, 0, 63, 0, 0, 127, 0, 127, 0, 0, 129, 0, 57, 0, 52, 0, 0, 144, 193, 81, 15, 101, 65, 0, 0, 0, 63, 0, 0, 127, 0, 127, 0, 0, 129, 0, 57, 0, 52, 0, 0, 144, 193, 81, 15, 101, 65, 0, 0, 0, 63, 0, 0, 127, 0, 127, 0, 0, 129, 0, 57, 0, 52, 0, 0, 160, 193, 81, 15, 69, 65, 0, 0, 0, 63, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 0, 0, 0, 144, 193, 81, 15, 69, 65, 0, 0, 0, 63, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 52, 0, 0, 160, 193, 81, 15, 101, 65, 0, 0, 0, 63, 0, 0, 127, 0, 127, 0, 0, 129, 0, 57, 0, 0, 0, 0, 144, 193, 87, 120, 205, 193, 0, 0, 0, 63, 0, 129, 0, 0, 127, 0, 0, 127, 0, 54, 0, 52, 0, 0, 160, 193, 87, 120, 205, 193, 0, 0, 0, 191, 0, 129, 0, 0, 127, 0, 0, 127, 0, 48, 0, 56, 0, 0, 144, 193, 87, 120, 205, 193, 0, 0, 0, 191, 0, 129, 0, 0, 127, 0, 0, 127, 0, 54, 0, 56, 0, 0, 160, 193, 87, 120, 205, 193, 0, 0, 0, 63, 0, 129, 0, 0, 127, 0, 0, 127, 0, 48, 0, 52, 0, 0, 160, 193, 81, 15, 101, 65, 0, 0, 0, 63, 0, 127, 0, 0, 129, 0, 0, 127, 0, 59, 0, 52, 0, 0, 144, 193, 81, 15, 101, 65, 0, 0, 0, 191, 0, 127, 0, 0, 129, 0, 0, 127, 0, 57, 0, 56, 0, 0, 160, 193, 81, 15, 101, 65, 0, 0, 0, 191, 0, 127, 0, 0, 129, 0, 0, 127, 0, 59, 0, 56, 0, 0, 144, 193, 81, 15, 101, 65, 0, 0, 0, 63, 0, 127, 0, 0, 129, 0, 0, 127, 0, 57, 0, 52, 0, 0, 144, 193, 81, 15, 69, 65, 0, 0, 0, 63, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 52, 0, 0, 160, 193, 87, 120, 205, 193, 0, 0, 0, 63, 0, 0, 127, 0, 0, 127, 0, 127, 0, 54, 0, 0, 0, 0, 144, 193, 87, 120, 205, 193, 0, 0, 0, 63, 0, 0, 127, 0, 0, 127, 0, 127, 0, 54, 0, 52, 0, 0, 160, 193, 81, 15, 69, 65, 0, 0, 0, 63, 0, 0, 127, 0, 0, 127, 0, 127, 0, 57, 0, 0, 0, 0, 144, 193, 81, 15, 69, 65, 0, 0, 0, 191, 127, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 56, 0, 0, 144, 193, 87, 120, 205, 193, 0, 0, 0, 63, 127, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 52, 0, 0, 144, 193, 87, 120, 205, 193, 0, 0, 0, 191, 127, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 56, 0, 0, 144, 193, 81, 15, 69, 65, 0, 0, 0, 63, 127, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 52, 0, 0, 160, 193, 81, 15, 69, 65, 0, 0, 0, 191, 0, 0, 129, 0, 0, 127, 0, 127, 0, 57, 0, 58, 0, 0, 144, 193, 87, 120, 205, 193, 0, 0, 0, 191, 0, 0, 129, 0, 0, 127, 0, 127, 0, 54, 0, 56, 0, 0, 160, 193, 87, 120, 205, 193, 0, 0, 0, 191, 0, 0, 129, 0, 0, 127, 0, 127, 0, 54, 0, 58, 0, 0, 144, 193, 81, 15, 69, 65, 0, 0, 0, 191, 0, 0, 129, 0, 0, 127, 0, 127, 0, 57, 0, 56, 0, 0, 160, 193, 81, 15, 69, 65, 0, 0, 0, 63, 129, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 60, 0, 0, 160, 193, 87, 120, 205, 193, 0, 0, 0, 191, 129, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 58, 0, 0, 160, 193, 87, 120, 205, 193, 0, 0, 0, 63, 129, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 60, 0, 0, 160, 193, 81, 15, 69, 65, 0, 0, 0, 191, 129, 0, 0, 0, 0, 127, 0, 127, 0, 57, 0, 58, 0, 0, 144, 193, 81, 15, 101, 65, 0, 0, 0, 191, 0, 0, 129, 0, 127, 0, 0, 127, 0, 57, 0, 56, 0, 0, 0, 0, 81, 15, 69, 65, 0, 0, 0, 191, 0, 0, 129, 0, 127, 0, 0, 127, 0, 57, 0, 56, 0, 0, 144, 193, 81, 15, 69, 65, 0, 0, 0, 191, 0, 0, 129, 0, 0, 127, 0, 127, 0, 57, 0, 56, 0, 0, 0, 0, 81, 15, 101, 65, 0, 0, 0, 191, 0, 0, 129, 0, 127, 0, 0, 127, 0, 57, 0, 56, 0, 0, 144, 193, 81, 15, 101, 65, 0, 0, 0, 63, 0, 127, 0, 0, 129, 0, 0, 127, 0, 57, 0, 52, 0, 0, 0, 0, 81, 15, 101, 65, 0, 0, 0, 191, 0, 127, 0, 0, 127, 0, 0, 127, 0, 57, 0, 56, 0, 0, 144, 193, 81, 15, 101, 65, 0, 0, 0, 191, 0, 127, 0, 0, 129, 0, 0, 127, 0, 57, 0, 56, 0, 0, 0, 0, 81, 15, 101, 65, 0, 0, 0, 63, 0, 127, 0, 0, 127, 0, 0, 127, 0, 57, 0, 52, 0, 0, 0, 0, 81, 15, 69, 65, 0, 0, 0, 63, 0, 129, 0, 0, 127, 0, 0, 127, 0, 57, 0, 52, 0, 0, 144, 193, 81, 15, 69, 65, 0, 0, 0, 191, 0, 129, 0, 0, 127, 0, 0, 127, 0, 57, 0, 56, 0, 0, 0, 0, 81, 15, 69, 65, 0, 0, 0, 191, 0, 129, 0, 0, 127, 0, 0, 127, 0, 57, 0, 56, 0, 0, 144, 193, 81, 15, 69, 65, 0, 0, 0, 63, 0, 129, 0, 0, 127, 0, 0, 127, 0, 57, 0, 52, 0, 0, 160, 65, 81, 15, 101, 65, 0, 0, 0, 191, 127, 0, 0, 0, 127, 0, 0, 127, 0, 57, 0, 58, 0, 0, 160, 65, 81, 15, 69, 65, 0, 0, 0, 63, 127, 0, 0, 0, 0, 127, 0, 129, 0, 57, 0, 60, 0, 0, 160, 65, 81, 15, 69, 65, 0, 0, 0, 191, 127, 0, 0, 0, 0, 127, 0, 129, 0, 57, 0, 58, 0, 0, 160, 65, 81, 15, 101, 65, 0, 0, 0, 63, 127, 0, 0, 0, 127, 0, 0, 127, 0, 57, 0, 60, 0, 0, 144, 65, 81, 15, 101, 65, 0, 0, 0, 191, 0, 0, 129, 0, 127, 0, 0, 127, 0, 57, 0, 56, 0, 0, 160, 65, 81, 15, 69, 65, 0, 0, 0, 191, 0, 0, 129, 0, 0, 127, 0, 129, 0, 57, 0, 58, 0, 0, 144, 65, 81, 15, 69, 65, 0, 0, 0, 191, 0, 0, 129, 0, 0, 127, 0, 129, 0, 57, 0, 56, 0, 0, 160, 65, 81, 15, 101, 65, 0, 0, 0, 191, 0, 0, 129, 0, 127, 0, 0, 127, 0, 57, 0, 58, 0, 0, 144, 65, 81, 15, 101, 65, 0, 0, 0, 63, 0, 0, 127, 0, 127, 0, 0, 129, 0, 57, 0, 52, 0, 0, 144, 65, 81, 15, 69, 65, 0, 0, 0, 63, 0, 0, 127, 0, 0, 127, 0, 129, 0, 57, 0, 52, 0, 0, 160, 65, 81, 15, 101, 65, 0, 0, 0, 63, 0, 0, 127, 0, 127, 0, 0, 129, 0, 57, 0, 0, 0, 0, 144, 65, 81, 15, 69, 65, 0, 0, 0, 63, 0, 0, 127, 0, 0, 127, 0, 129, 0, 57, 0, 52, 0, 0, 160, 65, 81, 15, 69, 65, 0, 0, 0, 63, 0, 0, 127, 0, 0, 127, 0, 129, 0, 57, 0, 0, 0, 0, 144, 65, 81, 15, 101, 65, 0, 0, 0, 63, 0, 0, 127, 0, 127, 0, 0, 129, 0, 57, 0, 52, 0, 0, 160, 65, 87, 120, 205, 193, 0, 0, 0, 63, 0, 129, 0, 0, 129, 0, 0, 129, 0, 48, 0, 52, 0, 0, 144, 65, 87, 120, 205, 193, 0, 0, 0, 191, 0, 129, 0, 0, 129, 0, 0, 129, 0, 54, 0, 56, 0, 0, 160, 65, 87, 120, 205, 193, 0, 0, 0, 191, 0, 129, 0, 0, 129, 0, 0, 129, 0, 48, 0, 56, 0, 0, 144, 65, 87, 120, 205, 193, 0, 0, 0, 63, 0, 129, 0, 0, 129, 0, 0, 129, 0, 54, 0, 52, 0, 0, 144, 65, 81, 15, 101, 65, 0, 0, 0, 63, 0, 127, 0, 0, 127, 0, 0, 129, 0, 57, 0, 52, 0, 0, 160, 65, 81, 15, 101, 65, 0, 0, 0, 191, 0, 127, 0, 0, 127, 0, 0, 129, 0, 59, 0, 56, 0, 0, 144, 65, 81, 15, 101, 65, 0, 0, 0, 191, 0, 127, 0, 0, 127, 0, 0, 129, 0, 57, 0, 56, 0, 0, 160, 65, 81, 15, 101, 65, 0, 0, 0, 63, 0, 127, 0, 0, 127, 0, 0, 129, 0, 59, 0, 52, 0, 0, 160, 65, 81, 15, 69, 65, 0, 0, 0, 63, 0, 0, 127, 0, 0, 127, 0, 129, 0, 57, 0, 0, 0, 0, 144, 65, 87, 120, 205, 193, 0, 0, 0, 63, 0, 0, 127, 0, 0, 127, 0, 129, 0, 54, 0, 52, 0, 0, 160, 65, 87, 120, 205, 193, 0, 0, 0, 63, 0, 0, 127, 0, 0, 127, 0, 129, 0, 54, 0, 0, 0, 0, 144, 65, 81, 15, 69, 65, 0, 0, 0, 63, 0, 0, 127, 0, 0, 127, 0, 129, 0, 57, 0, 52, 0, 0, 144, 65, 81, 15, 69, 65, 0, 0, 0, 63, 129, 0, 0, 0, 0, 127, 0, 129, 0, 57, 0, 52, 0, 0, 144, 65, 87, 120, 205, 193, 0, 0, 0, 191, 129, 0, 0, 0, 0, 127, 0, 129, 0, 54, 0, 56, 0, 0, 144, 65, 87, 120, 205, 193, 0, 0, 0, 63, 129, 0, 0, 0, 0, 127, 0, 129, 0, 54, 0, 52, 0, 0, 144, 65, 81, 15, 69, 65, 0, 0, 0, 191, 129, 0, 0, 0, 0, 127, 0, 129, 0, 57, 0, 56, 0, 0, 144, 65, 81, 15, 69, 65, 0, 0, 0, 191, 0, 0, 129, 0, 0, 127, 0, 129, 0, 57, 0, 56, 0, 0, 160, 65, 87, 120, 205, 193, 0, 0, 0, 191, 0, 0, 129, 0, 0, 127, 0, 129, 0, 54, 0, 58, 0, 0, 144, 65, 87, 120, 205, 193, 0, 0, 0, 191, 0, 0, 129, 0, 0, 127, 0, 129, 0, 54, 0, 56, 0, 0, 160, 65, 81, 15, 69, 65, 0, 0, 0, 191, 0, 0, 129, 0, 0, 127, 0, 129, 0, 57, 0, 58, 0, 0, 160, 65, 81, 15, 69, 65, 0, 0, 0, 191, 127, 0, 0, 0, 0, 127, 0, 129, 0, 57, 0, 58, 0, 0, 160, 65, 87, 120, 205, 193, 0, 0, 0, 63, 127, 0, 0, 0, 0, 127, 0, 129, 0, 54, 0, 60, 0, 0, 160, 65, 87, 120, 205, 193, 0, 0, 0, 191, 127, 0, 0, 0, 0, 127, 0, 129, 0, 54, 0, 58, 0, 0, 160, 65, 81, 15, 69, 65, 0, 0, 0, 63, 127, 0, 0, 0, 0, 127, 0, 129, 0, 57, 0, 60, 0, 0, 144, 65, 81, 15, 69, 65, 0, 0, 0, 191, 0, 0, 129, 0, 0, 127, 0, 129, 0, 57, 0, 56, 0, 0, 144, 65, 81, 15, 101, 65, 0, 0, 0, 191, 0, 0, 129, 0, 127, 0, 0, 127, 0, 57, 0, 56, 0, 0, 144, 65, 81, 15, 69, 65, 0, 0, 0, 63, 0, 129, 0, 0, 127, 0, 0, 127, 0, 57, 0, 52, 0, 0, 144, 65, 81, 15, 69, 65, 0, 0, 0, 191, 0, 129, 0, 0, 127, 0, 0, 127, 0, 57, 0, 56 ),
+"array_index_data": PoolByteArray( 0, 0, 2, 0, 1, 0, 0, 0, 1, 0, 3, 0, 4, 0, 6, 0, 5, 0, 4, 0, 5, 0, 7, 0, 8, 0, 10, 0, 9, 0, 8, 0, 9, 0, 11, 0, 12, 0, 14, 0, 13, 0, 12, 0, 13, 0, 15, 0, 16, 0, 18, 0, 17, 0, 16, 0, 17, 0, 19, 0, 20, 0, 22, 0, 21, 0, 20, 0, 21, 0, 23, 0, 24, 0, 26, 0, 25, 0, 24, 0, 25, 0, 27, 0, 28, 0, 30, 0, 29, 0, 28, 0, 29, 0, 31, 0, 32, 0, 34, 0, 33, 0, 32, 0, 33, 0, 35, 0, 36, 0, 38, 0, 37, 0, 36, 0, 37, 0, 39, 0, 40, 0, 42, 0, 41, 0, 40, 0, 41, 0, 43, 0, 44, 0, 46, 0, 45, 0, 44, 0, 45, 0, 47, 0, 48, 0, 50, 0, 49, 0, 48, 0, 49, 0, 51, 0, 52, 0, 54, 0, 53, 0, 52, 0, 53, 0, 55, 0, 56, 0, 58, 0, 57, 0, 56, 0, 57, 0, 59, 0, 60, 0, 61, 0, 10, 0, 60, 0, 10, 0, 8, 0, 62, 0, 64, 0, 63, 0, 62, 0, 63, 0, 65, 0, 66, 0, 68, 0, 67, 0, 66, 0, 67, 0, 69, 0, 70, 0, 72, 0, 71, 0, 70, 0, 71, 0, 73, 0, 74, 0, 76, 0, 75, 0, 74, 0, 75, 0, 77, 0, 78, 0, 80, 0, 79, 0, 78, 0, 79, 0, 81, 0, 82, 0, 84, 0, 83, 0, 82, 0, 83, 0, 85, 0, 86, 0, 88, 0, 87, 0, 86, 0, 87, 0, 89, 0, 43, 0, 41, 0, 90, 0, 43, 0, 90, 0, 91, 0, 47, 0, 45, 0, 72, 0, 47, 0, 72, 0, 70, 0, 92, 0, 93, 0, 50, 0, 92, 0, 50, 0, 48, 0 ),
+"blend_shape_data": [  ],
+"format": 97559,
+"index_count": 156,
+"material": ExtResource( 3 ),
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 94
+}
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 1, 19.4744, 0.470437 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 20.1331, 1, 1 )
+
+[sub_resource type="PhysicsMaterial" id=4]
+friction = 0.0
+bounce = 1000.0
+
+[sub_resource type="ProceduralSky" id=5]
+
+[sub_resource type="Environment" id=6]
+background_mode = 3
+background_sky = SubResource( 5 )
+background_color = Color( 0, 0.564706, 0.807843, 1 )
+
+[sub_resource type="ArrayMesh" id=7]
+surfaces/0 = {
+"aabb": AABB( -25, 0, -25, 50, 1e-005, 50 ),
+"array_data": PoolByteArray( 0, 0, 200, 193, 0, 0, 0, 0, 0, 0, 200, 65, 0, 127, 0, 0, 127, 0, 0, 127, 0, 0, 0, 60, 0, 0, 200, 65, 0, 0, 0, 0, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 0, 60, 0, 0, 0, 0, 200, 193, 0, 0, 0, 0, 0, 0, 200, 193, 0, 127, 0, 0, 127, 0, 0, 127, 0, 0, 0, 0, 0, 0, 200, 65, 0, 0, 0, 0, 0, 0, 200, 65, 0, 127, 0, 0, 127, 0, 0, 127, 0, 60, 0, 60 ),
+"array_index_data": PoolByteArray( 0, 0, 2, 0, 1, 0, 0, 0, 1, 0, 3, 0 ),
+"blend_shape_data": [  ],
+"format": 97559,
+"index_count": 6,
+"material": ExtResource( 6 ),
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 4
+}
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 24.983, 1, 25.124 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 25
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 25
+font_data = ExtResource( 8 )
+
+[node name="Escena_principal" type="Spatial" groups=[
+"Escena_principal",
+]]
+script = ExtResource( 1 )
+particulas = ExtResource( 2 )
+
+[node name="barra_pelota_pared" type="Spatial" parent="."]
+editor/display_folded = true
+
+[node name="paredes" type="StaticBody" parent="barra_pelota_pared" groups=[
+"paredes",
+]]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.6838, 0 )
+
+[node name="paredes" type="MeshInstance" parent="barra_pelota_pared/paredes"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="barra_pelota_pared/paredes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19, -7, 0 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="barra_pelota_pared/paredes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -7, 0 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="barra_pelota_pared/paredes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.326, 0 )
+shape = SubResource( 3 )
+
+[node name="barra" parent="barra_pelota_pared" groups=[
+"barra",
+] instance=ExtResource( 4 )]
+velocidad_barra = 30.0
+velocidad_inicial_Pelota = 30.0
+
+[node name="pelota" parent="barra_pelota_pared/barra" instance=ExtResource( 5 )]
+physics_material_override = SubResource( 4 )
+gravity_scale = 0.0
+contacts_reported = 1
+contact_monitor = true
+sleeping = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06, 19.58, 30.79 )
+
+[node name="iluminacion" type="Spatial" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="iluminacion"]
+environment = SubResource( 6 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="iluminacion"]
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 26, 11 )
+shadow_enabled = true
+
+[node name="suelo" type="Spatial" parent="."]
+editor/display_folded = true
+
+[node name="suelo" type="MeshInstance" parent="suelo"]
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="area_para_eventos" type="Area" parent="suelo/suelo"]
+
+[node name="shape" type="CollisionShape" parent="suelo/suelo/area_para_eventos"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+shape = SubResource( 8 )
+
+[node name="bloques_rigidos" parent="." instance=ExtResource( 7 )]
+
+[node name="Inteface" type="Node" parent="."]
+
+[node name="puntaje" type="Label" parent="Inteface"]
+margin_right = 183.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Puntaje = 0"
+
+[node name="vidas" type="Label" parent="Inteface"]
+margin_top = 30.0
+margin_right = 145.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Vidas = 3"
+
+[node name="music_and_vfx" type="Node" parent="."]
+
+[node name="morir" type="AudioStreamPlayer" parent="music_and_vfx" groups=[
+"morir",
+]]
+stream = ExtResource( 9 )
+bus = "efectos"
+
+[node name="point" type="AudioStreamPlayer" parent="music_and_vfx" groups=[
+"point",
+]]
+stream = ExtResource( 10 )
+bus = "efectos"
+
+[node name="rebote" type="AudioStreamPlayer" parent="music_and_vfx" groups=[
+"rebote",
+]]
+stream = ExtResource( 11 )
+bus = "efectos"
+
+[node name="music" type="AudioStreamPlayer" parent="music_and_vfx"]
+stream = ExtResource( 12 )
+autoplay = true
+bus = "musica_escena_1"
+
+[node name="perdiste" type="AudioStreamPlayer" parent="music_and_vfx"]
+stream = ExtResource( 13 )
+bus = "perdiste"
+
+[node name="touch_botones" type="Node" parent="."]
+
+[node name="touch_izquierda" type="TouchScreenButton" parent="touch_botones"]
+position = Vector2( 9.53674e-007, 500 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 14 )
+pressed = ExtResource( 15 )
+action = "touch_izquierda"
+
+[node name="touch_derecha" type="TouchScreenButton" parent="touch_botones"]
+position = Vector2( 1023.85, 600.302 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 14 )
+pressed = ExtResource( 15 )
+action = "touch_derecha"
+
+[node name="touch_start" type="TouchScreenButton" parent="touch_botones"]
+position = Vector2( 921.288, 309.816 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 16 )
+pressed = ExtResource( 17 )
+action = "touch_start"
+
+[node name="particulas" type="Spatial" parent="." groups=[
+"particulas",
+]]
+[connection signal="body_entered" from="barra_pelota_pared/barra/pelota" to="." method="_on_pelota_body_entered"]
+[connection signal="body_entered" from="suelo/suelo/area_para_eventos" to="." method="_on_area_para_eventos_body_entered"]

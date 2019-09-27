@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Flames_music.ogg-59986c0c56299681bfd6fe3999f19c41.oggstr"
+
+[deps]
+
+source_file="res://musica_y_vfx/Flames_music.ogg"
+dest_files=[ "res://.import/Flames_music.ogg-59986c0c56299681bfd6fe3999f19c41.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

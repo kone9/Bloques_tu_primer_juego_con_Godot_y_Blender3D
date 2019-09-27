@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/point.wav-7706b875c5dd7506b858330846bbd9ab.sample"
+
+[deps]
+
+source_file="res://musica_y_vfx/point.wav"
+dest_files=[ "res://.import/point.wav-7706b875c5dd7506b858330846bbd9ab.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

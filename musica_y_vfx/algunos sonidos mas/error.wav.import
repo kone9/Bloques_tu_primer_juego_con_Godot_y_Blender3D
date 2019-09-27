@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/error.wav-12df10462f80dcba61e5d4325b249327.sample"
+
+[deps]
+
+source_file="res://musica_y_vfx/algunos sonidos mas/error.wav"
+dest_files=[ "res://.import/error.wav-12df10462f80dcba61e5d4325b249327.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
